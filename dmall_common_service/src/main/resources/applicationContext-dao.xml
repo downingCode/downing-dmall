@@ -29,7 +29,7 @@
 		</property>
 	</bean>
 	<bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.qingcheng.dao" />
+		<property name="basePackage" value="com.downing.dao" />
 	</bean>
 
 	<!-- 事务管理器  -->
