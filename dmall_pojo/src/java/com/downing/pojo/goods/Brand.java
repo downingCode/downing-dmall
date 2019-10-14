@@ -3,12 +3,13 @@ package com.downing.pojo.goods;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author downing
  * @descript
  */
-@Table(name = "tb_brand")
+@Table(name = "dg_brand")
 public class Brand implements Serializable {
 
     @Id
@@ -16,11 +17,15 @@ public class Brand implements Serializable {
 
     private String name;
 
-    private String image;
+    private String logo;
 
     private String letter;
 
     private Integer seq;
+
+    private Boolean deleted;
+
+    private Date createTime;
 
     public Integer getId() {
         return id;
@@ -38,12 +43,12 @@ public class Brand implements Serializable {
         this.name = name;
     }
 
-    public String getImage() {
-        return image;
+    public String getLogo() {
+        return logo;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setLogo(String logo) {
+        this.logo = logo;
     }
 
     public String getLetter() {
@@ -60,5 +65,21 @@ public class Brand implements Serializable {
 
     public void setSeq(Integer seq) {
         this.seq = seq;
+    }
+
+    public Boolean getDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(Boolean deleted) {
+        this.deleted = deleted;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }
