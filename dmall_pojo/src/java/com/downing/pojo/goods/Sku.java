@@ -17,6 +17,8 @@ public class Sku implements Serializable {
 
     private Long spuId;
 
+    private String name;
+
     private String image;
 
     private Integer originalPrice;
@@ -27,18 +29,26 @@ public class Sku implements Serializable {
 
     private Integer stock;
 
-    private Integer propertyId;
+    private String property;
 
     private Date updateTime;
 
     private Date createTime;
 
-    public Integer getPropertyId() {
-        return propertyId;
+    public String getName() {
+        return name;
     }
 
-    public void setPropertyId(Integer propertyId) {
-        this.propertyId = propertyId;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getProperty() {
+        return property;
+    }
+
+    public void setProperty(String property) {
+        this.property = property;
     }
 
     public Long getId() {
