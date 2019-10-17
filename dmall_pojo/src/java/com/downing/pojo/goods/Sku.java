@@ -9,7 +9,7 @@ import java.util.Date;
  * @author downing
  * @descript
  */
-@Table
+@Table(name = "dg_sku")
 public class Sku implements Serializable {
 
     @Id
