@@ -3,6 +3,7 @@ package com.downing.pojo.goods;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -21,11 +22,11 @@ public class Sku implements Serializable {
 
     private String image;
 
-    private Integer originalPrice;
+    private BigDecimal originalPrice;
 
-    private Integer price;
+    private BigDecimal price;
 
-    private Integer supplyPrice;
+    private BigDecimal supplyPrice;
 
     private Integer stock;
 
@@ -75,27 +76,27 @@ public class Sku implements Serializable {
         this.image = image;
     }
 
-    public Integer getOriginalPrice() {
+    public BigDecimal getOriginalPrice() {
         return originalPrice;
     }
 
-    public void setOriginalPrice(Integer originalPrice) {
+    public void setOriginalPrice(BigDecimal originalPrice) {
         this.originalPrice = originalPrice;
     }
 
-    public Integer getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
-    public Integer getSupplyPrice() {
+    public BigDecimal getSupplyPrice() {
         return supplyPrice;
     }
 
-    public void setSupplyPrice(Integer supplyPrice) {
+    public void setSupplyPrice(BigDecimal supplyPrice) {
         this.supplyPrice = supplyPrice;
     }
 

@@ -3,6 +3,7 @@ package com.downing.pojo.goods;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -25,8 +26,8 @@ public class Spu implements Serializable {
     private Boolean marketing;
     private Integer status;
     private Boolean deleted;
-    private Integer minPrice;
-    private Integer maxPrice;
+    private BigDecimal minPrice;
+    private BigDecimal maxPrice;
     private Date updateTime;
     private Date createTime;
     private Integer shopId;
@@ -136,19 +137,19 @@ public class Spu implements Serializable {
         this.deleted = deleted;
     }
 
-    public Integer getMinPrice() {
+    public BigDecimal getMinPrice() {
         return minPrice;
     }
 
-    public void setMinPrice(Integer minPrice) {
+    public void setMinPrice(BigDecimal minPrice) {
         this.minPrice = minPrice;
     }
 
-    public Integer getMaxPrice() {
+    public BigDecimal getMaxPrice() {
         return maxPrice;
     }
 
-    public void setMaxPrice(Integer maxPrice) {
+    public void setMaxPrice(BigDecimal maxPrice) {
         this.maxPrice = maxPrice;
     }
 

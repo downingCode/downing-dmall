@@ -45,15 +45,34 @@ public class GoodsServiceImpl implements GoodsService {
      * {
      * "spu":{
      * "name":"华为p30 pro",
-     * "title":"超强广角，照亮你的美"
+     * "sn":"商品编号",
+     * "title":"超强广角，照亮你的美",
+     * "images":"商品图片",
+     * "content":"商品内容",
+     * "brandId":"1",
+     * "categoryId":"1",
+     * "isSku":1,
+     * "shopId":1
      * },
      * "skuList":[
      * {
-     * "name":"华为p30 pro 蓝色 5.5寸"，
-     * "property":[{"key"："颜色","valye":"蓝色"},{"key"："尺寸","value":"5.5寸"}]
+     * "name":"华为p30 pro 蓝色 5.5寸",
+     * "image":"sku图片",
+     * "originalPrice":3200,
+     * "price":2200,
+     * "supplyPrice":1200,
+     * "stock":50,
+     * "property":[{"key":"颜色","value":"蓝色"},{"key":"尺寸","value":"5.5寸"}]
      * },{
-     * "name":"华为p30 pro 红色"
-     * "property":[{"key"："颜色","valye":"红色"}]
+     * "name":"华为p30 pro 红色",
+     * "image":"sku图片",
+     * "originalPrice":3300,
+     * "price":2100,
+     * "supplyPrice":1300,
+     * "stock":50,
+     * "property":[{"key":"颜色","value":"红色"},{"key":"尺寸","value":"6寸"}]
+     * }
+     * ]
      * }
      * ]
      * }
@@ -101,7 +120,7 @@ public class GoodsServiceImpl implements GoodsService {
 
         //更新信息
         spu.setStock(stock);
-        skuList.sort(Comparator.comparingInt(Sku::getPrice));
+        skuList.sort(Comparator.comparing(Sku::getPrice));
         spu.setMinPrice(skuList.get(0).getPrice());
         spu.setMaxPrice(skuList.get(skuList.size() - 1).getPrice());
         spu.setUpdateTime(new Date());
