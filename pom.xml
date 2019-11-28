@@ -16,6 +16,7 @@
         <module>dmall_service_goods</module>
         <module>dmall_web_manager</module>
         <module>dmall_service_system</module>
+        <module>dmall_service_order</module>
     </modules>
 
     <packaging>pom</packaging>
