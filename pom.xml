@@ -19,6 +19,7 @@
         <module>dmall_service_order</module>
         <module>dmall_common_cas</module>
         <module>dmall_web_user</module>
+        <module>dmall_web_portal</module>
     </modules>
 
     <packaging>pom</packaging>
